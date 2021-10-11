@@ -1,10 +1,12 @@
 let express = require('express');
 let app = express();
+const cors = require('cors');
 require('dotenv').config()
 const sequelize = require('./db/conexion');
-const userRoutes = require('./routes/user')
+const viewUserTeclers = require('./view/viewUsersTeclers')
 
 app.use(express.json())
+app.use(cors());
 async function serverStart() {
   try {
     await sequelize.authenticate();
@@ -16,8 +18,7 @@ async function serverStart() {
     console.error('DB conexion error:', error);
   }
 }
-
 serverStart();
 
 //Routes
-userRoutes(app)
+viewUserTeclers(app)
