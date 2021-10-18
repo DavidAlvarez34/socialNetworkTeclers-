@@ -3,8 +3,9 @@ let app = express();
 const cors = require('cors');
 require('dotenv').config()
 const sequelize = require('./db/conexion');
-const viewUserTeclers = require('./view/viewUsersTeclers')
-
+const viewUserTeclers = require('./view/viewUsersTeclers');
+const registerUser = require('./view/registerUserView');
+const infoAdditonalView=require('./view/infoAdditonalView')
 app.use(express.json())
 app.use(cors());
 async function serverStart() {
@@ -21,4 +22,6 @@ async function serverStart() {
 serverStart();
 
 //Routes
-viewUserTeclers(app)
+viewUserTeclers(app);
+registerUser(app);
+infoAdditonalView(app)

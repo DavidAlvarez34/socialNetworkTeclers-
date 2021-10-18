@@ -23,32 +23,34 @@
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
-              <form class="px-md-2">
+              <div class="px-md-2">
 
                 <div class="form-outline mb-4 text-center">
-                  <input type="text" id="form3Example1q" class="form-control" placeholder="nombre" required />
+                  <input type="text" id="nameUserTecler" class="form-control" placeholder="nombre" required />
                 </div>
                 <div class="form-outline mb-4 text-center">
-                  <input type="text" id="inputPassword" class="form-control" placeholder="Apellidos" required>
+                  <input type="text" id="firstNameTeclers" class="form-control" placeholder="Apellidos" required>
                 </div>
 
                 <div class="form-outline mb-4 text-center">
                   <input type="text" id="form3Example1q" class="form-control" placeholder="nombre de usuario" required />
                 </div>
                 <div class="form-outline mb-4 ">
-                  <input type="date" id="startDateCreated" name="trip-start" value="1998-07-22" min="1950-01-01"
+                  <label for="">Fecha de nacimiento</label>
+                  <br>
+                  <input type="date" id="dateBirthTeclers" name="trip-start" value="1998-07-22" min="1950-01-01"
                   max="2005-12-31">
                 </div>
 
                 <div class="form-outline mb-4 text-center">
-                  <input type="email" id="inputPassword" class="form-control" placeholder="email" required>
+                  <input type="email" id="emailRegisterTecler" class="form-control" placeholder="email" required>
 
                 </div>
                 <div class="form-outline mb-4 text-center">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                  <input type="password" id="inputPasswordRegister" class="form-control" placeholder="Contraseña" required>
                 </div>
-                <button class="btn btn-success btnLogin" type="submit">Registrar</button>
-              </form>
+                <button class="btn btn-success btnLogin" onclick="createUser()" type="submit">Registrar</button>
+              </div>
 
             </div>
           </div>
@@ -59,7 +61,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
+  <script src="./scripts/formRegister.js"></script>
 </body>
 
 </html>
