@@ -25,6 +25,9 @@ const createUser = async () => {
 }
 
 const sendDataUser = async (dataUpdate) => {
+  try {
+    
+  
   console.log(dataUpdate);
   let searching = await fetch("http://localhost:3000/createUserTeclers", {
     method: "POST",
@@ -34,9 +37,14 @@ const sendDataUser = async (dataUpdate) => {
     },
     body: JSON.stringify(dataUpdate),
   }).then((response) => {
-    console.log("validacion");
+    
     if (!response.ok) {
-      alert("Hubo un error no se encuentra el id");
+      alert("Hubo un error no se registro");
     }
+    alert("Usuario registrado");
   });
+} catch (error) {
+    alert("Error de usuario durante la conexion")
+}
+
 };

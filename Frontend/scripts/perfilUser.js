@@ -88,6 +88,7 @@ const getPhoto=async(url_photo)=>{
   });
   const date = await searching.json(searching);
   imagePreview.src = date.photoUserUrl;
+  
   console.log("La url", date);
 }
 getPhoto();
@@ -238,6 +239,5 @@ const getInfoUserPerfil = async() => {
     `;
     HTMLResponse.innerHTML += `${tpl}`;
   }
-  
 };
 getInfoUserPerfil();

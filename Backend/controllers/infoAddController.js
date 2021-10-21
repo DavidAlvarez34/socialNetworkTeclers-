@@ -16,10 +16,10 @@ const infoAddModel = require("../model/infoAddModel")
         
     }
 
-    module.exports.createPerfilAdd = async (userCreatePerfil) => {
+    module.exports.UpdatePerfilAdd = async (userCreatePerfil) => {
         let response = new infoAddModel();
-        let result = await response.create(userCreatePerfil);
-        console.log(userCreatePerfil);
+        let result = await response.update(userCreatePerfil);
+        
         return "Metodo creado";
     }
     module.exports.perfilUserTeclers = async (Usr) => {
