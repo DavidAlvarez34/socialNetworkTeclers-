@@ -33,7 +33,7 @@ CREATE TABLE commentsUsers(
      id_comments int NOT NULL IDENTITY (1,1),
      comments TEXT,
      emailUsr VARCHAR(60),
-     FOREIGN KEY(emailUsr) REFERENCES userTecla(emailUsr)
+     FOREIGN KEY(emailUsr) REFERENCES userTecla(emailUsr);
 )
 SELECT * FROM  commentsUsers;
 DROP TABLE commentsUsers;

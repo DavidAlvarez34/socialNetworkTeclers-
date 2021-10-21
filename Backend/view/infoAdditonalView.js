@@ -26,7 +26,7 @@ module.exports = (app) => {
     app.post('/createInfoAdditionalPerfil', autenticationUser.userAutentication, async (req, res) => {
         try {
             let user = req.body
-            let result = await infoAddController.createPerfilAdd(user)
+            let result = await infoAddController.UpdatePerfilAdd(user)
             console.log("Hola este es el usuario",user);
             res.send({'token':result});
         } catch (err) {

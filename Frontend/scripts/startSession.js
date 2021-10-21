@@ -35,13 +35,11 @@ class StartSession {
       const data = await url.json();
       console.log(data);
       localStorage.setItem("myData",data.token);
-    
-    //  console.log(infoUser);
-     //sessionStorage.setItem("emailUser",email)
+      alert("Iniciando cession");
      window.location="./perfilUser.html"
     } catch (error) {
       localStorage.setItem("myData",data);
-      // sessionStorage.setItem("emailUser",email)
+     
       alert("Error usuarios y contraseñas incorrectos")
     }
     
@@ -51,5 +49,5 @@ const loginStart = new StartSession();
 
 function signOf(){
   console.log(Hola);
-  //window.location="./index.html"
+  window.location="./index.html"
 }
